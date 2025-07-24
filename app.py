@@ -6,8 +6,7 @@ from bson import ObjectId
 app = Flask(__name__)
 CORS(app)                    #cross origin resource sharing
 
-# Connect to local MongoDB instance
-client=MongoClient("mongodb+srv://tan_mayee_:Ta@200206@usermanagementcluster.ynilgey.mongodb.net/") #connecting to the database on cloud through mongoDB Atlas
+client=MongoClient("mongodb+srv://tan_mayee_:<db_password>@usermanagementcluster.ynilgey.mongodb.net/") #connecting to the database on cloud through mongoDB Atlas
 #client = MongoClient("mongodb://localhost:27017") #connecting to local database
 db = client["userDB"]
 collection = db["users"]
